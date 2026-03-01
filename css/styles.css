@@ -1,0 +1,504 @@
+:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;--accent:#2d89ef}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffff;
+    color:#222
+}
+nav{
+    background-color: #ffffff;
+    padding:1rem;
+    width: 100%;
+    height: 5rem;
+    color:#000000;
+    display:grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000000;
+    font-weight: 400;
+    
+}
+p{
+    font-size: 1.1rem;
+    color: #222;
+   
+}
+.home-header{
+    width: 100%;
+    height: 50rem;
+}
+
+/* Hero Section */
+.home-header {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('../assets/voiture/route.jpeg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: white;
+    padding: 0 10%;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    text-align: left; /* Pour éviter le centrage par défaut de ton CSS précédent */
+}
+.home-header p {
+    color: white;
+    text-align: left; /* Pour éviter le centrage par défaut de ton CSS précédent */
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.home-header-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-header-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.features {
+    display: grid;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.feature i {
+    font-size: 2.5rem;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+.feature h3 {
+    color: #311b07;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.discover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.view-all {
+    margin-top: 20px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #f39c12;
+    color: #f39c12;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #f39c12;
+    color: white;
+}
+
+.car-demo {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: grid;
+    grid-auto-flow: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap:1rem;
+    text-align: justify
+}
+.car-card {
+    position: relative;
+    margin: 0;
+    border-radius: 15px;
+    padding: 15px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    
+}
+.car-type {
+    position: absolute;
+    top: 0.95rem;
+    left: 0.95rem;
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9rem;
+}
+.car-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(41, 32, 32, 0.05);
+}
+.car-content {
+    flex-grow: 1;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.car-content p{
+    color: #555;
+    font-size: 0.9rem;
+}
+.btn-reserve {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-reserve:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+} 
+.home-footer-btn{
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.auth-card {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-header {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+}
+
+.auth-header button {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.auth-header button.active {
+  color: #f39c12;
+  border-bottom: 2px solid #f39c12;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.btn-main {
+  background: #f39c12;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.container_voiture{
+    display: flex;
+    flex-direction: column;
+    max-width:1200px;
+    padding:1rem;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 6px 24px rgba(0,0,0,.06);
+    gap: 0.5rem;
+}
+/* Container de la page voitures */
+.cars-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cars-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* La Grille */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Style des cartes (plus poussé) */
+.card-car {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.card-car:hover {
+    transform: translateY(-5px);
+}
+
+.car-image-box {
+    height: 200px;
+    position: relative;
+}
+
+.badge-type {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f39c12;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.content-car {
+    padding: 0.5rem;;
+}
+
+.content-car h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+}
+
+.car-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    font-weight: bold;
+    color: #2d89ef;
+    font-size: 1.1rem;
+}
+
+/* Layout Réservation */
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Garde les deux colonnes égales */
+  gap: 3rem;                     /* Espacement entre les deux blocs */
+  padding: 2rem;
+  border-radius: 12px;
+  
+ 
+  max-width: 900px;             
+  margin: 2rem auto;             /* Centre le conteneur horizontalement */
+  align-items: start;            /* Aligne les blocs vers le haut si l'un est plus court */
+}
+
+.booking-car-image {
+  width: 100%;
+  height: 17rem;
+  margin-bottom: 20px;
+  
+}
+.booking-car-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: justify;
+    padding: 0.5rem;
+}
+.btn-back {
+    background-color: #f39c12;
+    color: white;
+    border: 2px solid;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.booking-car-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #e74c3c;
+}
+
+.booking-form-card {
+    color: #222; /* Pour rendre le texte "Finalisez votre réservation" visible */
+}
+
+.booking-form-card input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+}
+/* Tableau de gestion */
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.bookings-table th, .bookings-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.bookings-table th {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.btn-edit { color: #2d89ef; border: none; background: none; cursor: pointer; }
+.btn-delete { color: #e74c3c; border: none; background: none; cursor: pointer; }
+
+
+@media (max-width: 768px) {
+    
+    nav {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 10px;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+    }
+    .car-content {
+    display: grid;
+    justify-items: start; 
+    }
+    .booking-container {
+        grid-template-columns: 1fr; 
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .car-demo {
+        grid-auto-flow: row; 
+        grid-template-columns: 1fr; 
+        padding: 10px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .home-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 60vh;
+        padding: 0 5%; 
+        gap: 1rem;
+        text-align: left;
+       
+    }
+    
+    .home-header h1 {
+        font-size: 1.8rem;
+        text-align: start;
+    }
+}

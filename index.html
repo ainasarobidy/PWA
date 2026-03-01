@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do PWA - Exemple</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="theme-color" content="#2d89ef" />
+</head>
+
+<body>
+  <nav class="navbar">
+      <div class="logo" onclick="showPage('home')">
+        <p>DRIVEPWA</p>
+      </div>
+      <ul class="nav-links">
+        <a href="#" onclick="showPage('home')">Accueil</a>
+        <a href="#" onclick="showPage('cars')">Voitures</a>
+        <a href="#" id="nav-auth-btn" onclick="showPage('auth')">Connexion</a>
+      </ul>
+  </nav>
+  <main class="container">
+
+    <section id="page-home" class="page"> </section>
+    <section id="page-cars" class="page" style="display:none;"> </section>
+    <section id="page-auth" class="page" style="display:none;"> </section>
+    <section id="page-reserve" class="page" style="display:none;"> </section>
+     <section id="page-my-bookings" class="page" style="display:none;"> </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Registrarion du Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker enregistré'))
+        .catch(err => console.error('Erreur SW:', err));
+    }
+  </script>
+</body>
+
+</html>
